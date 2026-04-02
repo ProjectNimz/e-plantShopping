@@ -18,24 +18,6 @@ function CartItem() {
   const totalCost = useSelector(selectCartTotal)
   const [checkoutMessage, setCheckoutMessage] = useState('')
 
-  if (cartItems.length === 0) {
-    return (
-      <div className="page-shell">
-        <Header />
-
-        <main className="cart-page">
-          <section className="cart-empty">
-            <h3>Your shopping cart is empty.</h3>
-            <p>Add a few plants to get started.</p>
-            <Link className="button button--secondary" to="/plants">
-              Continue Shopping
-            </Link>
-          </section>
-        </main>
-      </div>
-    )
-  }
-
   return (
     <div className="page-shell">
       <Header />
@@ -54,63 +36,72 @@ function CartItem() {
 
         <div className="cart-layout">
           <section className="cart-list">
-            {cartItems.map((item) => (
-              <article className="cart-item" key={item.id}>
-                <img className="cart-item__image" src={item.image} alt={item.name} />
+            {cartItems.length === 0 ? (
+              <section className="cart-empty">
+                <h3>Your shopping cart is empty.</h3>
+                <p>Add a few plants to get started.</p>
+              </section>
+            ) : (
+              cartItems.map((item) => (
+                <article className="cart-item" key={item.id}>
+                  <img className="cart-item__image" src={item.image} alt={item.name} />
 
-                <div className="cart-item__details">
-                  <div className="cart-item__title-row">
-                    <div>
-                      <h3 className="cart-item__name">{item.name}</h3>
-                      <p className="cart-item__label">{item.category}</p>
+                  <div className="cart-item__details">
+                    <div className="cart-item__title-row">
+                      <div>
+                        <h3 className="cart-item__name">{item.name}</h3>
+                        <p className="cart-item__label">{item.category}</p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="cart-item__stats">
-                    <div className="cart-item__stat">
-                      <span className="cart-item__label">Unit price</span>
-                      <strong>${item.price.toFixed(2)}</strong>
+                    <div className="cart-item__stats">
+                      <div className="cart-item__stat">
+                        <span className="cart-item__label">Unit price</span>
+                        <strong>${item.price.toFixed(2)}</strong>
+                      </div>
+                      <div className="cart-item__stat">
+                        <span className="cart-item__label">Quantity</span>
+                        <strong>{item.quantity}</strong>
+                      </div>
+                      <div className="cart-item__stat">
+                        <span className="cart-item__label">Total cost</span>
+                        <strong>${(item.price * item.quantity).toFixed(2)}</strong>
+                      </div>
                     </div>
-                    <div className="cart-item__stat">
-                      <span className="cart-item__label">Quantity</span>
-                      <strong>{item.quantity}</strong>
-                    </div>
-                    <div className="cart-item__stat">
-                      <span className="cart-item__label">Total cost</span>
-                      <strong>${(item.price * item.quantity).toFixed(2)}</strong>
-                    </div>
-                  </div>
 
-                  <div className="cart-item__controls">
-                    <div className="cart-item__quantity">
+                    <div className="cart-item__controls">
+                      <div className="cart-item__quantity">
+                        <button
+                          aria-label={`Decrease quantity of ${item.name}`}
+                          className="cart-item__quantity-button"
+                          onClick={() => dispatch(decreaseQuantity(item.id))}
+                          type="button"
+                        >
+                          Decrease
+                        </button>
+                        <span className="cart-item__quantity-value">{item.quantity}</span>
+                        <button
+                          aria-label={`Increase quantity of ${item.name}`}
+                          className="cart-item__quantity-button"
+                          onClick={() => dispatch(increaseQuantity(item.id))}
+                          type="button"
+                        >
+                          Increase
+                        </button>
+                      </div>
+
                       <button
-                        className="cart-item__quantity-button"
-                        onClick={() => dispatch(decreaseQuantity(item.id))}
+                        className="cart-item__delete"
+                        onClick={() => dispatch(deleteItem(item.id))}
                         type="button"
                       >
-                        −
-                      </button>
-                      <span className="cart-item__quantity-value">{item.quantity}</span>
-                      <button
-                        className="cart-item__quantity-button"
-                        onClick={() => dispatch(increaseQuantity(item.id))}
-                        type="button"
-                      >
-                        +
+                        Delete
                       </button>
                     </div>
-
-                    <button
-                      className="cart-item__delete"
-                      onClick={() => dispatch(deleteItem(item.id))}
-                      type="button"
-                    >
-                      Delete
-                    </button>
                   </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              ))
+            )}
           </section>
 
           <aside className="cart-summary">
