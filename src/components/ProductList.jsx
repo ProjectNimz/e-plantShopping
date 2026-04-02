@@ -23,7 +23,7 @@ function ProductList() {
             <h2>Browse our houseplant collection.</h2>
             <p>
               Choose from aromatic herbs, medicinal favorites, and air purifying
-              plants to build your dream indoor garden.
+              plants arranged for small homes, calm corners, and everyday plant care.
             </p>
           </div>
 
@@ -60,6 +60,7 @@ function ProductList() {
                     </div>
 
                     <p className="product-card__description">{plant.description}</p>
+                    <p className="product-card__note">{plant.note}</p>
 
                     <button
                       className="product-card__button"

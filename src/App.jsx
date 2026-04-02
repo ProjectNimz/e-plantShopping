@@ -10,11 +10,16 @@ function LandingPage() {
       <div className="landing-page__overlay">
         <section className="landing-page__content">
           <span className="landing-page__eyebrow">Paradise Nursery</span>
-          <h1 className="landing-page__title">Plants that make home feel alive.</h1>
+          <h1 className="landing-page__title">Small-room plants with big calm energy.</h1>
           <p className="landing-page__lead">
-            Explore calming greenery, pet-friendly favorites, and statement
-            houseplants curated to brighten every room in your home.
+            Build an indoor plant shelf with fragrant herbs, easy air purifiers,
+            and comforting greens chosen for apartments, desks, and sunny corners.
           </p>
+          <div className="landing-page__highlights" aria-label="Shop highlights">
+            <span>Beginner friendly picks</span>
+            <span>Three themed collections</span>
+            <span>Simple cart and checkout flow</span>
+          </div>
           <Link className="button button--primary" to="/plants">
             Get Started
           </Link>

@@ -30,6 +30,7 @@ const plants = [
     description: 'A calming fragrant blend that makes bright windows feel spa-like.',
     price: 18,
     category: 'Aromatic Plants',
+    note: 'Best for sunny windows',
     image: buildPlantImage('Lavender Mint', '#8d7cb0', '#f0d8bd', '#b9f0a0', '#8f5b40'),
   },
   {
@@ -38,6 +39,7 @@ const plants = [
     description: 'Fresh citrus notes and soft leaves for cheerful kitchen corners.',
     price: 16,
     category: 'Aromatic Plants',
+    note: 'Fresh kitchen favorite',
     image: buildPlantImage('Lemon Balm', '#9fcb7f', '#f6e9bc', '#c5f193', '#8d5f3d'),
   },
   {
@@ -46,6 +48,7 @@ const plants = [
     description: 'A crisp, woodsy herb that adds scent and texture to small spaces.',
     price: 19,
     category: 'Aromatic Plants',
+    note: 'Low-fuss herb',
     image: buildPlantImage('Rosemary Glow', '#5f8c77', '#dceccb', '#c7f0ab', '#886046'),
   },
   {
@@ -54,6 +57,7 @@ const plants = [
     description: 'Softly scented foliage with a romantic greenhouse feel.',
     price: 21,
     category: 'Aromatic Plants',
+    note: 'Soft evening scent',
     image: buildPlantImage('Jasmine Bloom', '#6aa3a1', '#f4d9d5', '#b7ed9d', '#8b6145'),
   },
   {
@@ -62,6 +66,7 @@ const plants = [
     description: 'A lively everyday herb that thrives in sunny, well-loved kitchens.',
     price: 15,
     category: 'Aromatic Plants',
+    note: 'Great for kitchen shelves',
     image: buildPlantImage('Sweet Basil', '#76a36d', '#ece3bc', '#d5f7a8', '#84563e'),
   },
   {
@@ -70,6 +75,7 @@ const plants = [
     description: 'Silvery leaves and a cool aroma for a refreshing indoor mood.',
     price: 24,
     category: 'Aromatic Plants',
+    note: 'Cool, refreshing profile',
     image: buildPlantImage('Eucalyptus Mist', '#6b8fa6', '#e0d9ef', '#b9f2cf', '#7a5640'),
   },
   {
@@ -78,6 +84,7 @@ const plants = [
     description: 'A classic soothing succulent with sculptural leaves and easy care.',
     price: 17,
     category: 'Medicinal Plants',
+    note: 'Beginner friendly',
     image: buildPlantImage('Aloe Vera', '#88c46a', '#dff0bf', '#c0f28b', '#8e6448'),
   },
   {
@@ -86,6 +93,7 @@ const plants = [
     description: 'A heritage herb known for its warm aroma and tender foliage.',
     price: 18,
     category: 'Medicinal Plants',
+    note: 'Traditional herbal pick',
     image: buildPlantImage('Holy Basil', '#7bb06d', '#f0dec2', '#d5f2a5', '#805a40'),
   },
   {
@@ -94,6 +102,7 @@ const plants = [
     description: 'Soft blossoms and delicate texture that feel light and restorative.',
     price: 20,
     category: 'Medicinal Plants',
+    note: 'Gentle windowsill grower',
     image: buildPlantImage('Chamomile Cloud', '#a9c46c', '#f6ebca', '#d3f0a0', '#8d6142'),
   },
   {
@@ -102,6 +111,7 @@ const plants = [
     description: 'Bright, cooling leaves that bring freshness to a study or office.',
     price: 16,
     category: 'Medicinal Plants',
+    note: 'Desk-side freshness',
     image: buildPlantImage('Peppermint Calm', '#60a08c', '#d9f1de', '#baf1a2', '#7c5740'),
   },
   {
@@ -110,6 +120,7 @@ const plants = [
     description: 'Velvety leaves with a grounded look that suits warm interiors.',
     price: 18,
     category: 'Medicinal Plants',
+    note: 'Earthy indoor accent',
     image: buildPlantImage('Sage Serenity', '#809b70', '#e8dfcd', '#c2e89b', '#846049'),
   },
   {
@@ -118,6 +129,7 @@ const plants = [
     description: 'Compact greenery with a gentle herbal profile and tidy habit.',
     price: 14,
     category: 'Medicinal Plants',
+    note: 'Compact shelf plant',
     image: buildPlantImage('Thyme Trail', '#7d9d5d', '#ebe2be', '#cef1a4', '#8d6245'),
   },
   {
@@ -126,6 +138,7 @@ const plants = [
     description: 'An upright, dependable favorite that looks striking in modern rooms.',
     price: 26,
     category: 'Air Purifying Plants',
+    note: 'Excellent starter plant',
     image: buildPlantImage('Snake Plant', '#6c8e58', '#d8e6b0', '#dcf29a', '#82543c'),
   },
   {
@@ -134,6 +147,7 @@ const plants = [
     description: 'Glossy foliage and elegant blooms that soften busy living areas.',
     price: 28,
     category: 'Air Purifying Plants',
+    note: 'Loves bright indirect light',
     image: buildPlantImage('Peace Lily', '#5f8a74', '#d7ead3', '#d4f2aa', '#7f5a42'),
   },
   {
@@ -142,6 +156,7 @@ const plants = [
     description: 'Polished leaves and sturdy growth for low-maintenance plant lovers.',
     price: 25,
     category: 'Air Purifying Plants',
+    note: 'Tough and forgiving',
     image: buildPlantImage('ZZ Plant', '#55766b', '#dde8cb', '#bff0a0', '#855a42'),
   },
   {
@@ -150,6 +165,7 @@ const plants = [
     description: 'Arched leaves and playful offsets that brighten shelves and desks.',
     price: 19,
     category: 'Air Purifying Plants',
+    note: 'Great for hanging pots',
     image: buildPlantImage('Spider Plant', '#7aa96c', '#f0edc8', '#ddf49d', '#8a6246'),
   },
   {
@@ -158,6 +174,7 @@ const plants = [
     description: 'Feathery greenery for humid spots that need softness and volume.',
     price: 24,
     category: 'Air Purifying Plants',
+    note: 'Bathroom-friendly choice',
     image: buildPlantImage('Boston Fern', '#5f8f63', '#d8e9c7', '#c6ef9b', '#7f5940'),
   },
   {
@@ -166,6 +183,7 @@ const plants = [
     description: 'Bold leaves and a clean silhouette for a polished indoor look.',
     price: 31,
     category: 'Air Purifying Plants',
+    note: 'Strong living-room statement',
     image: buildPlantImage('Rubber Plant', '#6d758d', '#ead1c5', '#b0e990', '#845a41'),
   },
 ]

@@ -50,6 +50,22 @@
   color: rgba(255, 250, 242, 0.9);
 }
 
+.landing-page__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0 0 1.5rem;
+}
+
+.landing-page__highlights span {
+  padding: 0.45rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 249, 239, 0.94);
+  font-size: 0.9rem;
+}
+
 .landing-page__about {
   padding: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -294,6 +310,17 @@
   min-height: 3.6rem;
 }
 
+.product-card__note {
+  display: inline-flex;
+  margin-top: 0.7rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: #edf4ef;
+  color: #426453;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
 .product-card__price {
   font-weight: 700;
   color: #163528;
@@ -459,6 +486,11 @@
   .landing-page__overlay {
     padding: 1.5rem;
     align-items: start;
+  }
+
+  .landing-page__highlights {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .catalog-page,
